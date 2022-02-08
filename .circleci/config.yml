@@ -16,11 +16,6 @@ jobs:
       - aws-cli/setup
       - eb/setup
       - run:
-          command: |
-            eb create udagram-api-dev
-            eb deploy udagram-api-dev
-            eb status
-      - run:
           name: frontend-install
           command: |
             npm run frontend:install
