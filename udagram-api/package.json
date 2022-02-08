@@ -14,7 +14,7 @@
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": " eb deploy"
+    "deploy": " eb deploy && eb setenv PORT=8081 DB_PORT=5432 POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=postgres AWS_REGION=us-east-1 AWS_BUCKET=s3://elasticbeanstalk-us-east-1-349923975949 POSTGRES_DB=udegram"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
