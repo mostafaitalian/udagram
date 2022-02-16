@@ -14,7 +14,7 @@
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "eb use udagram-api-dev && eb setenv AWS_ACCESS_KEY_ID=AKIAVC6IYEMGXGLZAY55 AWS_SECRET_ACCESS_KEY=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 AWS_BUCKET=s3://elasticbeanstalk-us-east-1-349923975949 AWS_REGION=us-east-1 POSTGRES_DB=udagram JWT_SECRET=welcome-from-here PORT=8081 profile=eb-cli POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=postgres DB_PORT=5432 POSTGRES_HOST=database-1.c6wozj0v6dlh.us-east-1.rds.amazonaws.com && eb deploy"
+    "deploy": "eb use udagram-api-dev && eb deploy && eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY AWS_BUCKET=$AWS_BUCKET AWS_REGION=$AWS_DEFAULT_REGION POSTGRES_DB=$POSTGRES_DB JWT_SECRET=$JWT_SECRET PORT=$PORT profile=eb-cli POSTGRES_USERNAME=$POSTGRES_USERNAME POSTGRES_PASSWORD=POSTGRES_PASSWORD DB_PORT=$DB_PORT POSTGRES_HOST=$POSTGRES_HOST"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",
