@@ -19,7 +19,8 @@ jobs:
       - checkout
       - aws-cli/setup
       - eb/setup
-      - browser/install-browser-tools
+      - browser/install-chrome
+      - browser/install-chromedriver
       
       - run:
           name: frontend-install
