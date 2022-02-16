@@ -18,7 +18,8 @@ module.exports = function (config) {
         base: 'ChromeHeadless',
         flags: [
           '--disable-extensions', 
-          '--no-sandbox', 
+          '--no-sandbox',
+          '--disable-setuid-sandbox',
           '--disable-web-security', 
           '--no-proxy-server']
       }
