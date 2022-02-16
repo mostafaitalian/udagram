@@ -40,7 +40,7 @@ module.exports = function (config) {
     captureTimeout:120000,
     logLevel: config.LOG_DEBUG,
     autoWatch: true,
-    browsers: ['Chrome'],
+    // browsers: ['Chrome'],
     // singleRun: false
   });
 };
