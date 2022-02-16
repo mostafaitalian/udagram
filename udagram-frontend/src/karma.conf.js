@@ -12,7 +12,7 @@ module.exports = function (config) {
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
-    browsers: ['ChromeHeadless'],
+    browsers: ['ChromeHeadless_test'],
     customLaunchers: {
       ChromeHeadless_test: {
         base: 'ChromeHeadless',
