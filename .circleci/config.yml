@@ -12,13 +12,14 @@ jobs:
       # the base image can run most needed actions with orbs
       - image: "cimg/base:stable"
         environment:
-          CHROME_BIN: /usr/bin/google-chrome
+          CHROME_BIN: "/usr/bin/google-chrome"
     steps:
       - node/install:
         node-version: "14.17.5"
       - checkout
       - aws-cli/setup
       - eb/setup
+      - browser/install-browser-tools
       
       - run:
           name: frontend-install

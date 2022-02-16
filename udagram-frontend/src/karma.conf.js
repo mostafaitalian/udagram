@@ -12,6 +12,17 @@ module.exports = function (config) {
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
+    // browsers: ['ChromeHeadless_test'],
+    // customLaunchers: {
+    //   ChromeHeadless_test: {
+    //     base: 'ChromeHeadless',
+    //     flags: [
+    //       '--disable-extensions', 
+    //       '--no-sandbox', 
+    //       '--disable-web-security', 
+    //       '--no-proxy-server']
+    //   }
+    // },
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
@@ -21,13 +32,14 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
-    listenAddress: "0.0.0.0",
+    // listenAddress: "0.0.0.0",
     port: 9876,
     colors: true,
     singleRun: true,
+    captureTimeout:120000,
     logLevel: config.LOG_DEBUG,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false
+    // singleRun: false
   });
 };
